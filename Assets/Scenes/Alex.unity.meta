@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 7128d9628f60c8a46ad104de1190740c
+<<<<<<<< HEAD:Assets/Scenes/Game.unity.meta
+guid: df39b0cd7462e8d48b1640f5e3be1bb4
+========
+guid: caf4b5ea441a6c341b853e8930876615
+>>>>>>>> main:Assets/Scenes/Alex.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
