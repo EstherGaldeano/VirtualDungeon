@@ -8904,7 +8904,7 @@ GameObject:
   - component: {fileID: 206399942}
   - component: {fileID: 206399943}
   m_Layer: 0
-  m_Name: Grupo1
+  m_Name: Group1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9960,7 +9960,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5452277035855378345, guid: ad111dd692bcea542aaf574e9989f131, type: 3}
       propertyPath: m_Name
-      value: Techo (2)
+      value: Ceiling (2)
       objectReference: {fileID: 0}
     - target: {fileID: 7430481858521136033, guid: ad111dd692bcea542aaf574e9989f131, type: 3}
       propertyPath: m_LocalScale.x
@@ -12978,7 +12978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b8d36a867b5786749b5a8a13d66fc015, type: 3}
       propertyPath: m_Name
-      value: MesaBarriles2
+      value: BarrelTable2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13120,7 +13120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 293825797}
   m_Layer: 0
-  m_Name: CamarasTaberna
+  m_Name: CamerasTavern
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14750,7 +14750,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &338840179
 AudioListener:
   m_ObjectHideFlags: 0
@@ -20774,7 +20774,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b8d36a867b5786749b5a8a13d66fc015, type: 3}
       propertyPath: m_Name
-      value: MesaBarriles1
+      value: BarrelTable1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21599,7 +21599,7 @@ GameObject:
   m_Component:
   - component: {fileID: 461538284}
   m_Layer: 0
-  m_Name: Techo
+  m_Name: Ceiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22660,7 +22660,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5452277035855378345, guid: ad111dd692bcea542aaf574e9989f131, type: 3}
       propertyPath: m_Name
-      value: Techo (1)
+      value: Ceiling (1)
       objectReference: {fileID: 0}
     - target: {fileID: 7430481858521136033, guid: ad111dd692bcea542aaf574e9989f131, type: 3}
       propertyPath: m_LocalScale.x
@@ -30625,17 +30625,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: FPSController
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41.389267
+      value: 50.51
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -62.53
+      value: -60.17
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 56.59
+      value: 5.13
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -31509,7 +31513,7 @@ GameObject:
   m_Component:
   - component: {fileID: 687551805}
   m_Layer: 0
-  m_Name: Sillas
+  m_Name: Chairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32475,7 +32479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 701109092}
   m_Layer: 0
-  m_Name: MesaBarriles
+  m_Name: BarrelTables
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34511,7 +34515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 732971832}
   m_Layer: 0
-  m_Name: Grupo3
+  m_Name: Group3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38482,7 +38486,7 @@ GameObject:
   m_Component:
   - component: {fileID: 818801652}
   m_Layer: 0
-  m_Name: Mesas
+  m_Name: Tables
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40099,7 +40103,7 @@ GameObject:
   - component: {fileID: 847257441}
   - component: {fileID: 847257440}
   m_Layer: 0
-  m_Name: FondoReja
+  m_Name: BackgroundGrid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45003,7 +45007,7 @@ GameObject:
   m_Component:
   - component: {fileID: 954314252}
   m_Layer: 0
-  m_Name: PilarCentral
+  m_Name: Pillar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53179,7 +53183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1149891291}
   m_Layer: 0
-  m_Name: Grupo4
+  m_Name: Group4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55675,7 +55679,7 @@ GameObject:
   - component: {fileID: 1199166934}
   - component: {fileID: 1199166935}
   m_Layer: 0
-  m_Name: Grupo3
+  m_Name: Group3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56952,7 +56956,7 @@ GameObject:
   - component: {fileID: 1226403193}
   - component: {fileID: 1226403194}
   m_Layer: 0
-  m_Name: Grupo2
+  m_Name: Group2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62313,7 +62317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6ad8e93de34c25c4ca013e932d12df29, type: 3}
       propertyPath: m_Name
-      value: SuperBarril
+      value: SuperBarrel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -62974,7 +62978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 773ddafe51fd2d3419a50716f674ab8f, type: 3}
       propertyPath: m_Name
-      value: RejaSuelo
+      value: Grid
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -63888,7 +63892,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1385700394}
   m_Layer: 0
-  m_Name: Grupo2
+  m_Name: Group2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66814,7 +66818,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 69c461a9103a3be44acbaeb31ed4dbda, type: 3}
       propertyPath: m_Name
-      value: pillar
+      value: Pillar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -67526,7 +67530,7 @@ GameObject:
   - component: {fileID: 1453221396}
   - component: {fileID: 1453221397}
   m_Layer: 0
-  m_Name: Suelo
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70174,7 +70178,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5452277035855378345, guid: ad111dd692bcea542aaf574e9989f131, type: 3}
       propertyPath: m_Name
-      value: Techo
+      value: Ceiling
       objectReference: {fileID: 0}
     - target: {fileID: 7430481858521136033, guid: ad111dd692bcea542aaf574e9989f131, type: 3}
       propertyPath: m_LocalScale.x
@@ -72795,7 +72799,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1560957003}
   m_Layer: 0
-  m_Name: Grupo1
+  m_Name: Group1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74199,7 +74203,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5452277035855378345, guid: ad111dd692bcea542aaf574e9989f131, type: 3}
       propertyPath: m_Name
-      value: Techo (3)
+      value: Ceiling (3)
       objectReference: {fileID: 0}
     - target: {fileID: 7430481858521136033, guid: ad111dd692bcea542aaf574e9989f131, type: 3}
       propertyPath: m_LocalScale.x
@@ -77958,7 +77962,7 @@ GameObject:
   - component: {fileID: 1660066151}
   - component: {fileID: 1660066152}
   m_Layer: 0
-  m_Name: Grupo4
+  m_Name: Group4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91038,7 +91042,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5340228843366458878, guid: 7d386ebe231317642aeb7c947b705502, type: 3}
       propertyPath: m_Name
-      value: AntorchaPared
+      value: Totch
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -92091,7 +92095,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1943821676}
   m_Layer: 0
-  m_Name: Paredes
+  m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96946,7 +96950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2047015044}
   m_Layer: 0
-  m_Name: Esquinas
+  m_Name: Corners
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100112,7 +100116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5340228843366458878, guid: 7d386ebe231317642aeb7c947b705502, type: 3}
       propertyPath: m_Name
-      value: AntorchaPared (1)
+      value: Torch
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -100242,7 +100246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2141072909}
   m_Layer: 0
-  m_Name: Objetos
+  m_Name: Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
