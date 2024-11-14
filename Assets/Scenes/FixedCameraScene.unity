@@ -69186,6 +69186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RightDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c55f13094ea3da94abae0f0cda7ae5b7, type: 3}
+      propertyPath: m_TagString
+      value: Interactuable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -98532,6 +98536,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeftDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c55f13094ea3da94abae0f0cda7ae5b7, type: 3}
+      propertyPath: m_TagString
+      value: Interactuable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -98560,7 +98568,7 @@ Animator:
   m_GameObject: {fileID: 2110104554}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8c09555c1395adf40825a8b5b1704b64, type: 2}
+  m_Controller: {fileID: 9100000, guid: e905394c8f234604d89a45fe0634f2c9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
