@@ -53858,7 +53858,7 @@ GameObject:
   - component: {fileID: 1183990718}
   m_Layer: 0
   m_Name: JailDoors
-  m_TagString: Untagged
+  m_TagString: Interactuable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68191,6 +68191,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RightDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c55f13094ea3da94abae0f0cda7ae5b7, type: 3}
+      propertyPath: m_TagString
+      value: Interactuable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -71588,6 +71592,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b53be86a0a97e454e8e8b5e848d8cf44, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3546630837441477689, guid: b53be86a0a97e454e8e8b5e848d8cf44, type: 3}
+      propertyPath: m_TagString
+      value: Interactuable
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b53be86a0a97e454e8e8b5e848d8cf44, type: 3}
       propertyPath: m_Name
@@ -96808,7 +96816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c55f13094ea3da94abae0f0cda7ae5b7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.6
+      value: -6.821
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c55f13094ea3da94abae0f0cda7ae5b7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -96870,7 +96878,7 @@ Animator:
   m_GameObject: {fileID: 2110104554}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8c09555c1395adf40825a8b5b1704b64, type: 2}
+  m_Controller: {fileID: 9100000, guid: 080dbdbb9460ff74dae1b29603fff400, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
