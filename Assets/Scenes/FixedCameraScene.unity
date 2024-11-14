@@ -27189,7 +27189,7 @@ Camera:
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 1
+  m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
@@ -35766,11 +35766,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 727118973}
-  m_Father: {fileID: 1224600989}
+  m_Father: {fileID: 1995297251}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 61.49997, y: -152.71}
+  m_AnchoredPosition: {x: 61.497498, y: -152.71}
   m_SizeDelta: {x: 31.2688, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &758326931
@@ -52858,11 +52858,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 429441403}
-  m_Father: {fileID: 1224600989}
+  m_Father: {fileID: 1995297251}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21.599968, y: -152.71}
+  m_AnchoredPosition: {x: 21.597382, y: -152.71}
   m_SizeDelta: {x: 31.2688, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1120629075
@@ -57699,8 +57699,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1120629074}
-  - {fileID: 758326930}
   - {fileID: 1509738966}
   - {fileID: 1562384852}
   - {fileID: 1587714145}
@@ -96838,6 +96836,8 @@ RectTransform:
   - {fileID: 1491636901}
   - {fileID: 351154005}
   - {fileID: 788032112}
+  - {fileID: 1120629074}
+  - {fileID: 758326930}
   m_Father: {fileID: 544913453}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
