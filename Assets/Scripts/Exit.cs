@@ -4,9 +4,6 @@ using UnityEngine.SceneManagement;
 public class Exit : MonoBehaviour
 {
 
-    [SerializeField]
-    private GameObject FPSController;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
