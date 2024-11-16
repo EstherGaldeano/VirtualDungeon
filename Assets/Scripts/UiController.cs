@@ -27,12 +27,31 @@ public class UiController : MonoBehaviour
 
     public void CambiarIntensidad()
     {
-        for (i = 0; i < iluminacionLobby.gameObject.transform.childCount; i++)
+        // Encuentra todos los objetos con el tag "Torch"
+        GameObject[] torches = GameObject.FindGameObjectsWithTag("Torch");
+
+        foreach (GameObject torch in torches)
         {
-            iluminacionLobby.gameObject.transform.GetChild(i).gameObject.GetComponent<Light>().intensity = sliderIntensidadLuz.gameObject.GetComponent<Slider>().value;
+            // Obtén todas las luces (incluso de los nietos) dentro de la antorcha
+            Light[] torchLight = torch.GetComponentsInChildren<Light>();
+
+            foreach (Light light in torchLight)
+            {
+                // Ajusta la intensidad de la luz al valor del slider
+                light.intensity = sliderIntensidadLuz.GetComponent<Slider>().value;
+            }
         }
-        for (i = 0; i < iluminacionTabern.gameObject.transform.childCount; i++)
+        
+        //Intensidad luces para todo el lobby
+         for (i = 0; i < iluminacionLobby.gameObject.transform.childCount; i++)
+         {
+             iluminacionLobby.gameObject.transform.GetChild(i).gameObject.GetComponent<Light>().intensity = sliderIntensidadLuz.gameObject.GetComponent<Slider>().value;
+         }
+        
+         //ANTIGUO SCRIPT
+        /* for (i = 0; i < iluminacionTabern.gameObject.transform.childCount; i++)
         {
+           // iluminacionTabern.gameObject.transform.GetChild(i).gameObject.GetComponent<Light>().intensity = sliderIntensidadLuz.gameObject.GetComponent<Slider>().value;
             iluminacionTabern.gameObject.transform.GetChild(i).gameObject.GetComponent<Light>().intensity = sliderIntensidadLuz.gameObject.GetComponent<Slider>().value;
         }
         for (i = 0; i < iluminacionBedroom.gameObject.transform.childCount; i++)
@@ -42,7 +61,7 @@ public class UiController : MonoBehaviour
         for (i = 0; i < iluminacionDungeon.gameObject.transform.childCount; i++)
         {
             iluminacionDungeon.gameObject.transform.GetChild(i).gameObject.GetComponent<Light>().intensity = sliderIntensidadLuz.gameObject.GetComponent<Slider>().value;
-        }
+        }*/
 
     }
 

@@ -173,6 +173,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AntorchaPared
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: faf64df55f91a7d4589b09fb5d5bbef2, type: 3}
+      propertyPath: m_TagString
+      value: Torch
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
