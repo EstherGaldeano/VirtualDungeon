@@ -7,6 +7,10 @@ TagManager:
   - Interactuable
   - UI
   - Torch
+  - BotonFixedCam
+  - BotonFPS
+  - BotonSalir
+  - BotonCreditos
   layers:
   - Default
   - TransparentFX
