@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: chairState
+    m_ConditionEvent: Accion
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8315209068839578427}
@@ -89,7 +89,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: chairState
+    m_ConditionEvent: Accion
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8315209068839578427}
@@ -114,7 +114,7 @@ AnimatorController:
   m_Name: chairParent
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: chairState
+  - m_Name: Accion
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -142,7 +142,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: chairState
+    m_ConditionEvent: Accion
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7094572724605103077}

@@ -11,11 +11,12 @@ TagManager:
   - BotonFPS
   - BotonSalir
   - BotonCreditos
+  - Fire
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Interactuable
   - Water
   - UI
   - 

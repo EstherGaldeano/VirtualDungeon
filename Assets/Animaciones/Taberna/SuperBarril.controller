@@ -35,7 +35,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Drink
+    m_ConditionEvent: Accion
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8281393666230259143}
@@ -87,7 +87,7 @@ AnimatorController:
   m_Name: SuperBarril
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Drink
+  - m_Name: Accion
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0

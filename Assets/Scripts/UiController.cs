@@ -45,7 +45,7 @@ public class UiController : MonoBehaviour
         //Intensidad luces para todo el lobby
          for (i = 0; i < iluminacionLobby.gameObject.transform.childCount; i++)
          {
-             iluminacionLobby.gameObject.transform.GetChild(i).gameObject.GetComponent<Light>().intensity = sliderIntensidadLuz.gameObject.GetComponent<Slider>().value;
+             iluminacionLobby.gameObject.transform.GetChild(i).gameObject.GetComponent<Light>().intensity = sliderIntensidadLuz.gameObject.GetComponent<Slider>().value*2;
          }
         
          //ANTIGUO SCRIPT
@@ -65,15 +65,22 @@ public class UiController : MonoBehaviour
 
     }
 
-    public void ChangeCameras(int camPosition){
+    public void ChangeCameras(int camPosition)
+    {
 
-    for (int i = 0; i< cameras.gameObject.transform.childCount; i++ ){
+        for (int i = 0; i< cameras.gameObject.transform.childCount; i++ )
+        {
         
-        cameras.gameObject.transform.GetChild(i).gameObject.SetActive(false);
-    }
+            cameras.gameObject.transform.GetChild(i).gameObject.SetActive(false);
+
+            cameras.gameObject.transform.GetChild(i).gameObject.tag = "Untagged";
+        }
     
-    cameras.gameObject.transform.GetChild(camPosition).gameObject.SetActive(true);
-    
+        cameras.gameObject.transform.GetChild(camPosition).gameObject.SetActive(true);
+
+        cameras.gameObject.transform.GetChild(camPosition).gameObject.tag = "MainCamera";
+
+
     }
 
     public void ApagarLuces()

@@ -113,6 +113,10 @@ PrefabInstance:
       value: MesaNormal
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4727715afbe78ee40993fa62a8c55587, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4727715afbe78ee40993fa62a8c55587, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -123,9 +127,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4727715afbe78ee40993fa62a8c55587, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7503168098016455623}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4727715afbe78ee40993fa62a8c55587, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6375822227694071795}
   m_SourcePrefab: {fileID: 100100000, guid: 4727715afbe78ee40993fa62a8c55587, type: 3}
 --- !u!1 &3922459656615702133 stripped
 GameObject:
@@ -153,28 +154,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.000001, y: 1.0000006, z: 4.0000014}
   m_Center: {x: 0.00000017881398, y: 0.50000006, z: 0.0000019073486}
---- !u!95 &6375822227694071795
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3922459656615702133}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &4405840854893294799 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4727715afbe78ee40993fa62a8c55587, type: 3}
