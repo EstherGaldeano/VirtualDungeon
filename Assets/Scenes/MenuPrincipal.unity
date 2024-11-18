@@ -2313,7 +2313,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &716797392
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2788,7 +2788,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &929327914
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4027,10 +4027,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Visita Virtual creada por:\nEsther Galdeano\nAndr\xE9s Hidalgo\nAlex P\xE9rez\nDaniel
-    Grados\n\nAssets:\r\nhttps://kaylousberg.itch.io/kaykit-dungeon-remastered\n\nM\xFAsica:\nhttps://pixabay.com/es/music/musica-de-elevador-elevator-music-bossa-nova-background-music-version-60s-10900/\n\nAdventure
-    by Alexander Nakarada (CreatorChords) | https://creatorchords.com\r\nMusic promoted
-    by https://www.free-stock-music.com\r\nCreative Commons / Attribution 4.0 International
-    (CC BY 4.0)\r\nhttps://creativecommons.org/licenses/by/4.0/"
+    Grados\n\nAssets:\r\nhttps://kaylousberg.itch.io/kaykit-dungeon-remastered\n\nM\xFAsica:\nhttps://pixabay.com/es/music/musica-de-elevador-elevator-music-bossa-nova-background-music-version-60s-10900/\n\n\"Celebration\"
+    and \"Adventure\" by Alexander Nakarada (CreatorChords) | https://creatorchords.com\r\nMusic
+    promoted by https://www.free-stock-music.com\r\nCreative Commons / Attribution
+    4.0 International (CC BY 4.0)\r\nhttps://creativecommons.org/licenses/by/4.0/"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -4460,7 +4460,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1814413830
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4702,7 +4702,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1886779760
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4835,7 +4835,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1910433649
 RectTransform:
   m_ObjectHideFlags: 0
