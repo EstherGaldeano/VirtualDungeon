@@ -130,7 +130,7 @@ public class UiController : MonoBehaviour
             foreach (Light light in torchLight)
             {
                 // Ajusta la intensidad de la luz al valor del slider
-                light.intensity = 1;
+                light.intensity = sliderIntensidadLuz.GetComponent<Slider>().value;
             }
         }
 
