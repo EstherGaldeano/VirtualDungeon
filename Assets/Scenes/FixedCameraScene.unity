@@ -49057,6 +49057,7 @@ Transform:
   - {fileID: 687551805}
   - {fileID: 293825797}
   - {fileID: 1168780052}
+  - {fileID: 1185637536}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1012933386
@@ -56659,6 +56660,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.0000005, y: 4, z: 1.0000006}
   m_Center: {x: -0.0000038146973, y: 2, z: 0.0000035017717}
+--- !u!4 &1185637536 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 385166149436656913, guid: 8ecedbff43c502449bd579ae05e838a5, type: 3}
+  m_PrefabInstance: {fileID: 1817336302}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1186011343 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ac10d995a1fb3d0439b22f0457a5c765, type: 3}
@@ -72425,7 +72431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c55f13094ea3da94abae0f0cda7ae5b7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.025
+      value: -4.17
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c55f13094ea3da94abae0f0cda7ae5b7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -76373,7 +76379,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3546630837441477689, guid: b53be86a0a97e454e8e8b5e848d8cf44, type: 3}
       propertyPath: m_TagString
-      value: Interactuable
+      value: DungeonChest
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b53be86a0a97e454e8e8b5e848d8cf44, type: 3}
       propertyPath: m_Name
@@ -90137,19 +90143,31 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1012426522}
     m_Modifications:
     - target: {fileID: 385166149436656913, guid: 8ecedbff43c502449bd579ae05e838a5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.07500001
+      objectReference: {fileID: 0}
+    - target: {fileID: 385166149436656913, guid: 8ecedbff43c502449bd579ae05e838a5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 9.316771
+      objectReference: {fileID: 0}
+    - target: {fileID: 385166149436656913, guid: 8ecedbff43c502449bd579ae05e838a5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.07500001
+      objectReference: {fileID: 0}
+    - target: {fileID: 385166149436656913, guid: 8ecedbff43c502449bd579ae05e838a5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -30.33
+      value: -0.3360013
       objectReference: {fileID: 0}
     - target: {fileID: 385166149436656913, guid: 8ecedbff43c502449bd579ae05e838a5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -57.20862
+      value: 1.4415765
       objectReference: {fileID: 0}
     - target: {fileID: 385166149436656913, guid: 8ecedbff43c502449bd579ae05e838a5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 63.079014
+      value: -0.001906395
       objectReference: {fileID: 0}
     - target: {fileID: 385166149436656913, guid: 8ecedbff43c502449bd579ae05e838a5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -97539,6 +97557,8 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 8
+  dungeonDoor1: {fileID: 1504221094}
+  dungeonDoor2: {fileID: 2110104554}
 --- !u!1001 &1990883952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -102622,7 +102642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c55f13094ea3da94abae0f0cda7ae5b7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.6
+      value: -6.84
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c55f13094ea3da94abae0f0cda7ae5b7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -104121,6 +104141,5 @@ SceneRoots:
   - {fileID: 1012426522}
   - {fileID: 591337511}
   - {fileID: 1482116678}
-  - {fileID: 1817336302}
   - {fileID: 672177236}
   - {fileID: 1981129637}

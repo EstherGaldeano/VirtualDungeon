@@ -12,6 +12,7 @@ TagManager:
   - BotonSalir
   - BotonCreditos
   - Fire
+  - DungeonChest
   layers:
   - Default
   - TransparentFX

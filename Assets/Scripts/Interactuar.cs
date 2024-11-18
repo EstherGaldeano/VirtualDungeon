@@ -11,9 +11,15 @@ public class Interactuar : MonoBehaviour
     private Color originalEmissionColor;
     private GameObject lastHitObject = null; // Guardamos el último objeto detectado
 
+    public GameObject dungeonDoor1;
+    public GameObject dungeonDoor2;
+    private bool dungeonDoorsClosed;
+
 
     private void Start()
     {
+        dungeonDoorsClosed = true;
+
         Scene currentScene = SceneManager.GetActiveScene();
         if(currentScene.name == "FirstPerson")
         {
@@ -37,6 +43,11 @@ public class Interactuar : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
+                if(hitObject.collider.gameObject.tag == "DungeonChest")
+                {
+                    DungeonDoors();
+                }
+
                 Animator anim = hitObject.collider.GetComponent<Animator>();
              
                 if (anim == null)
@@ -48,8 +59,6 @@ public class Interactuar : MonoBehaviour
                 anim.SetBool("Accion", !currentState);
 
             }
-
-            Debug.Log("Hit: " + hitObject.collider.gameObject.name);
 
             // Si el objeto detectado no tiene material, saltamos
             MeshRenderer renderer = hitObject.collider.gameObject.GetComponent<MeshRenderer>();
@@ -112,6 +121,17 @@ public class Interactuar : MonoBehaviour
                 // Limpiar el objeto actual al que se dejó de hacer raycast
                 lastHitObject = null;
             }
+        }
+    }
+
+    public void DungeonDoors()
+    {
+        if (dungeonDoorsClosed)
+        {
+            dungeonDoor1.GetComponent<Animator>().SetBool("Accion", true);
+            dungeonDoor2.GetComponent<Animator>().SetBool("Accion", true);
+
+            dungeonDoorsClosed = false;
         }
     }
 }

@@ -700,6 +700,8 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 8
+  dungeonDoor1: {fileID: 1504221094}
+  dungeonDoor2: {fileID: 2110104554}
 --- !u!1001 &11222461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68891,7 +68893,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c55f13094ea3da94abae0f0cda7ae5b7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.95
+      value: -4.17
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c55f13094ea3da94abae0f0cda7ae5b7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -72314,7 +72316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3546630837441477689, guid: b53be86a0a97e454e8e8b5e848d8cf44, type: 3}
       propertyPath: m_TagString
-      value: Interactuable
+      value: DungeonChest
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b53be86a0a97e454e8e8b5e848d8cf44, type: 3}
       propertyPath: m_Name
@@ -87429,15 +87431,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.47
+      value: 38.6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -57.01
+      value: -68.12
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 60.37
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -98036,7 +98038,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c55f13094ea3da94abae0f0cda7ae5b7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.821
+      value: -6.708
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c55f13094ea3da94abae0f0cda7ae5b7, type: 3}
       propertyPath: m_LocalRotation.w
