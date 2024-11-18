@@ -2313,7 +2313,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &716797392
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2788,7 +2788,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &929327914
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3632,7 +3632,7 @@ Transform:
   m_GameObject: {fileID: 1289365053}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 80.2, y: -0.3350002, z: -137}
+  m_LocalPosition: {x: 80.2, y: 7.6, z: -137}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4026,8 +4026,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Visitia Virtual creada por:\nEsther Galdeano\nAndr\xE9s Hidalgo\nAlex
-    P\xE9rez\nDaniel Grados\n\nAssets:\r\nhttps://kaylousberg.itch.io/kaykit-dungeon-remastered\n\nM\xFAsica:\nhttps://pixabay.com/es/music/musica-de-elevador-elevator-music-bossa-nova-background-music-version-60s-10900/"
+  m_text: "Visita Virtual creada por:\nEsther Galdeano\nAndr\xE9s Hidalgo\nAlex P\xE9rez\nDaniel
+    Grados\n\nAssets:\r\nhttps://kaylousberg.itch.io/kaykit-dungeon-remastered\n\nM\xFAsica:\nhttps://pixabay.com/es/music/musica-de-elevador-elevator-music-bossa-nova-background-music-version-60s-10900/\n\nAdventure
+    by Alexander Nakarada (CreatorChords) | https://creatorchords.com\r\nMusic promoted
+    by https://www.free-stock-music.com\r\nCreative Commons / Attribution 4.0 International
+    (CC BY 4.0)\r\nhttps://creativecommons.org/licenses/by/4.0/"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -4054,8 +4057,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.5
-  m_fontSizeBase: 22.5
+  m_fontSize: 18.8
+  m_fontSizeBase: 18.8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4457,7 +4460,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1814413830
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4699,7 +4702,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1886779760
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4832,7 +4835,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1910433649
 RectTransform:
   m_ObjectHideFlags: 0
