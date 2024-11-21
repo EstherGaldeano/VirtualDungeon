@@ -13,6 +13,10 @@ TagManager:
   - BotonCreditos
   - Fire
   - DungeonChest
+  - Arrow
+  - BeerHealth
+  - Ammo
+  - pruebaEnemigo
   layers:
   - Default
   - TransparentFX
