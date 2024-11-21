@@ -22,6 +22,7 @@ TagManager:
   - Door2
   - Door2Close
   - GrateDoor
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -29,7 +30,7 @@ TagManager:
   - Interactuable
   - Water
   - UI
-  - 
+  - Enemy
   - 
   - 
   - 
