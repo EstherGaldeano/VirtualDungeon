@@ -30,15 +30,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d925ade425130e849bc454459b66a6b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.320503
+      value: -4.387238
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d925ade425130e849bc454459b66a6b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -57.36
+      value: -1.6968689
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d925ade425130e849bc454459b66a6b5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 59.732735
+      value: 2.63
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d925ade425130e849bc454459b66a6b5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -46,7 +46,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d925ade425130e849bc454459b66a6b5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d925ade425130e849bc454459b66a6b5, type: 3}
       propertyPath: m_LocalRotation.y
@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d925ade425130e849bc454459b66a6b5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d925ade425130e849bc454459b66a6b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -355,7 +355,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 84
+  m_Constraints: 112
   m_CollisionDetection: 0
