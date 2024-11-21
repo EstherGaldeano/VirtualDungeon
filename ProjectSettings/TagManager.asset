@@ -17,6 +17,7 @@ TagManager:
   - BeerHealth
   - Ammo
   - pruebaEnemigo
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - Interactuable
   - Water
   - UI
-  - 
+  - Enemy
   - 
   - 
   - 
