@@ -6,8 +6,8 @@ public class Enemy : MonoBehaviour
 {
     private GameObject player;
     private float distance;
-    private int enemyLife = 1;
-    private int bossLife = 9;
+    private int enemyLife = 3;
+    private int enemyAttackDamage = 1;
     private bool attackCooldown;
     private int randomAttack;
     private Vector3 playerPosition;
@@ -21,6 +21,11 @@ public class Enemy : MonoBehaviour
     }
 
     void Update(){
+
+        if (gameObject.tag == "Boss"){
+            enemyLife = enemyLife * 3;
+            enemyAttackDamage = enemyAttackDamage * 3;
+        }  
 
         if (blockEnemy == false){
             distance = Vector3.Distance(this.gameObject.transform.position, player.gameObject.transform.position);
@@ -77,4 +82,6 @@ public class Enemy : MonoBehaviour
             Destroy(this.gameObject,5.0f);
         }
     }
+
+  
 }
