@@ -25,6 +25,7 @@ TagManager:
   - Enemy
   - ArmAttack
   - HeadAttack
+  - Boss
   layers:
   - Default
   - TransparentFX
