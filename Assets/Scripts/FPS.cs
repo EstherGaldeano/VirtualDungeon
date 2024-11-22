@@ -58,6 +58,12 @@ public class FPS : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.tag == "PruebaEnemigo")
+        {
+            Debug.Log("enemigo tocado");
+        }
+
+
         if (other.gameObject.tag == "BeerHealth")
         {
 
@@ -93,41 +99,43 @@ public class FPS : MonoBehaviour
             {
                 ammo = 100;
             }
+
+            if (ammo == 0)
+            {
+                sounds.gameObject.transform.GetChild(3).gameObject.GetComponent<AudioSource>().Play();
+            }
            
             ammoUI.gameObject.GetComponent<TMP_Text>().text = ammo.ToString() + "/100";
         }
 
-        //PRUEBA ENEMIGO. PILLAR EL CUBO E IR ESTAMPANDOLO AL FPSCONTROLLER
-        if (other.gameObject.tag == "pruebaEnemigo")
-        {
-            if (health > 0)
-            {
-                health -= 10;
-                healthUI.gameObject.GetComponent<Image>().fillAmount = health / 100;
-                sounds.gameObject.transform.GetChild(0).gameObject.GetComponent<AudioSource>().Play();
-                Debug.Log(health);
-            }
-            
-            if (health <= 0)
-            {
-                sounds.gameObject.transform.GetChild(1).gameObject.GetComponent<AudioSource>().Play();
-                this.gameObject.GetComponent<Animator>().SetTrigger("Accion");
-                Invoke ("GameOver", 3.0f);
-            }
-        }
+        
 
-        /*
-         * Dejo el if de los ataques de enemigos hechos. Falta el tag.
-         
-        if (other.gameObject.tag == )
-        {
-            health = health - 10;
-            healthUI.gameObject.GetComponent<Image>().fillAmount = health / 100;
-        }
-        */
     }
 
-       
+    public void OnCollisionEnter(Collision other)
+    {
+
+      
+            //Daño enemigo. Tag Enemy solo para pruebas
+            if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "ArmAttack" || other.gameObject.tag == "HeadAttack")
+            {
+                if (health > 0)
+                {
+                    health -= 10;
+                    healthUI.gameObject.GetComponent<Image>().fillAmount = health / 100;
+                    sounds.gameObject.transform.GetChild(0).gameObject.GetComponent<AudioSource>().Play();
+                    Debug.Log(health);
+                }
+
+                if (health == 0)
+                {
+                    sounds.gameObject.transform.GetChild(1).gameObject.GetComponent<AudioSource>().Play();
+                    this.gameObject.GetComponent<Animator>().SetTrigger("Accion");
+                    Invoke("GameOver", 3.0f);
+                }
+            }
+        }
+
     public void GameOver()
     {
         SceneManager.LoadScene("GameOver");

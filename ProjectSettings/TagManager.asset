@@ -16,13 +16,13 @@ TagManager:
   - Arrow
   - BeerHealth
   - Ammo
-  - pruebaEnemigo
   - Key1
   - Key2
   - Door2
   - Door2Close
   - GrateDoor
   - Enemy
+  - PruebaEnemigo
   layers:
   - Default
   - TransparentFX
