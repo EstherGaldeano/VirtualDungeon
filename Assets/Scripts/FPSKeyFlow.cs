@@ -15,10 +15,12 @@ public class FPSKeyFlow : MonoBehaviour
     public GameObject key1Img;
     public GameObject key2Img;
 
+    public Animator text1anim;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        text1.gameObject.SetActive(false);
+        //text1.gameObject.SetActive(false);
         key1.gameObject.SetActive(false);
         key2.gameObject.SetActive(false);
         key1Img.SetActive(false);
@@ -36,7 +38,15 @@ public class FPSKeyFlow : MonoBehaviour
         {
             key1.gameObject.SetActive(true);
         }
-        killsText.text = "KILLS: " + GameFlow.kills.ToString();
+        
+        if(GameFlow.kills < 10)
+        {
+            killsText.text = GameFlow.kills.ToString() + "/10";
+        }
+        else
+        {
+            killsText.text = "10/10";
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -44,12 +54,14 @@ public class FPSKeyFlow : MonoBehaviour
         if (other.gameObject.tag == "GrateDoor" && !GameFlow.key1Obtained)
         {
             text1.text = "Necesitas la llave 1 para abrir la puerta";
-            text1.gameObject.SetActive(true);
+            //text1.gameObject.SetActive(true);
+            text1anim.SetBool("Accion", true);
         }
         if (other.gameObject.tag == "Door2" && !GameFlow.key2Obtained)
         {
             text1.text = "Necesitas la llave 2 para abrir la puerta";
-            text1.gameObject.SetActive(true);
+            //text1.gameObject.SetActive(true);
+            text1anim.SetBool("Accion", true);
         }
         if (other.gameObject.tag == "Key1")
         {
@@ -70,7 +82,8 @@ public class FPSKeyFlow : MonoBehaviour
         if (other.gameObject.tag == "GrateDoor" && GameFlow.key1Obtained && !GameFlow.grateDoorOpened)
         {
             text1.text = "Tienes acceso";
-            text1.gameObject.SetActive(true);
+            //text1.gameObject.SetActive(true);
+            text1anim.SetBool("Accion", true);
             GameFlow.grateDoorOpened = true;
             Invoke("TextDisappear", 3f);
 
@@ -80,7 +93,8 @@ public class FPSKeyFlow : MonoBehaviour
         if (other.gameObject.tag == "Door2" && GameFlow.key2Obtained && !GameFlow.door2Opened)
         {
             text1.text = "Tienes acceso";
-            text1.gameObject.SetActive(true);
+            //text1.gameObject.SetActive(true);
+            text1anim.SetBool("Accion", true);
             GameFlow.door2Opened = true;
             Invoke("TextDisappear", 3f);
 
@@ -109,6 +123,6 @@ public class FPSKeyFlow : MonoBehaviour
 
     private void TextDisappear()
     {
-        text1.gameObject.SetActive(false);
+        text1anim.SetBool("Accion", false);
     }
 }
