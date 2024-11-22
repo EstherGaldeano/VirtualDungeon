@@ -122,6 +122,10 @@ public class Interactuar : MonoBehaviour
                 lastHitObject = null;
             }
         }
+
+       
+
+
     }
 
     public void DungeonDoors()
@@ -134,4 +138,6 @@ public class Interactuar : MonoBehaviour
             dungeonDoorsClosed = false;
         }
     }
+
+   
 }
