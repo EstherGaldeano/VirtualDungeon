@@ -17,7 +17,12 @@ TagManager:
   - BeerHealth
   - Ammo
   - pruebaEnemigo
-  - Explode
+  - Key1
+  - Key2
+  - Door2
+  - Door2Close
+  - GrateDoor
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -25,8 +30,8 @@ TagManager:
   - Interactuable
   - Water
   - UI
-  - 
-  - 
+  - Enemy
+  - Player
   - 
   - 
   - 
