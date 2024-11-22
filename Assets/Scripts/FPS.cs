@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class FPS : MonoBehaviour
 {
@@ -24,6 +25,9 @@ public class FPS : MonoBehaviour
 
     private float health;
 
+    [SerializeField]
+    private GameObject sounds;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -40,10 +44,14 @@ public class FPS : MonoBehaviour
             {
                 ammo--;
                 ammoUI.gameObject.GetComponent<TMP_Text>().text = ammo.ToString() + "/100";
-                //Disparo de flechas. Revisar restriccion
-                arrowAmmoClone = (GameObject)Instantiate(arrowAmmo, creationPoint.gameObject.transform.position, Quaternion.identity);
+                arrowAmmoClone = (GameObject)Instantiate(arrowAmmo, creationPoint.gameObject.transform.position, creationPoint.transform.rotation * Quaternion.Euler(270, 15, 0));
                 arrowAmmoClone.gameObject.GetComponent<Rigidbody>().linearVelocity = this.gameObject.transform.GetChild(0).gameObject.transform.forward * arrowForce;
                 Destroy(arrowAmmoClone.gameObject, 5.0f);
+            }
+
+            if (ammo == 0)
+            {
+                sounds.gameObject.transform.GetChild(3).gameObject.GetComponent<AudioSource>().Play();
             }
         }
     }
@@ -52,25 +60,40 @@ public class FPS : MonoBehaviour
     {
         if (other.gameObject.tag == "BeerHealth")
         {
-            Destroy(other.gameObject);
-            health += 10;
-           
-                if (health >= 100)
-                {
-                    health = 100;
-                }
 
+            //El objeto no se detruye si la salud está al máximo
+            if (health < 100)
+            {
+                health += 10;
+                sounds.gameObject.transform.GetChild(2).gameObject.GetComponent<AudioSource>().Play();
+                Destroy(other.gameObject);
+            }
+
+            //La salud no aumentará más de 100
+            if (health >= 100)
+            {
+                health = 100;
+            }
+         
             healthUI.gameObject.GetComponent<Image>().fillAmount = health / 100;
         }
 
         if (other.gameObject.tag == "Ammo")
         {
-            Destroy(other.gameObject);
-            ammo += 10;
+            //Si la munición está al máximo, el objeto no se eliminará
+            if (ammo < 100)
+            {
+                ammo += 10;
+                Destroy(other.gameObject);   
+                sounds.gameObject.transform.GetChild(4).gameObject.GetComponent<AudioSource>().Play();  
+            }
+
+            //La munición no aumentará más de 100
             if (ammo >= 100)
             {
                 ammo = 100;
             }
+           
             ammoUI.gameObject.GetComponent<TMP_Text>().text = ammo.ToString() + "/100";
         }
 
@@ -81,11 +104,15 @@ public class FPS : MonoBehaviour
             {
                 health -= 10;
                 healthUI.gameObject.GetComponent<Image>().fillAmount = health / 100;
+                sounds.gameObject.transform.GetChild(0).gameObject.GetComponent<AudioSource>().Play();
                 Debug.Log(health);
             }
-            else
+            
+            if (health <= 0)
             {
-                Debug.Log("You're dead");
+                sounds.gameObject.transform.GetChild(1).gameObject.GetComponent<AudioSource>().Play();
+                this.gameObject.GetComponent<Animator>().SetTrigger("Accion");
+                Invoke ("GameOver", 3.0f);
             }
         }
 
@@ -98,6 +125,12 @@ public class FPS : MonoBehaviour
             healthUI.gameObject.GetComponent<Image>().fillAmount = health / 100;
         }
         */
+    }
+
+       
+    public void GameOver()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 
 }

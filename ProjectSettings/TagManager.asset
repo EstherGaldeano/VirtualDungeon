@@ -17,6 +17,7 @@ TagManager:
   - BeerHealth
   - Ammo
   - pruebaEnemigo
+  - Explode
   layers:
   - Default
   - TransparentFX
