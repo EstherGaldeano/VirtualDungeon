@@ -15,11 +15,14 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuPrincipal.unity
     guid: 5f67c992c1814124fa6b10fdeea5946d
   - enabled: 1
-    path: Assets/Scenes/FixedCameraScene.unity
-    guid: b9a3906f2995fbb449629dd226820c1b
+    path: Assets/Scenes/Shooter.unity
+    guid: 39e9fbd95593d7d40a28a0ab7e1e6f80
   - enabled: 1
-    path: Assets/Scenes/FirstPerson.unity
-    guid: 2b9ecd77b12bbae408870e2c0198cb66
+    path: Assets/Scenes/GameOver.unity
+    guid: 4e386ad8f6a686241b05c86f1b7ec4bf
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 572e53518c62c574c8082e310982d1c7
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
