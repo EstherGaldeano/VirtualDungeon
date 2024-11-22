@@ -77,8 +77,9 @@ public class Enemy : MonoBehaviour
             
             blockEnemy = true;
             this.gameObject.GetComponent<NavMeshAgent>().speed = 0.0f;
-            this.gameObject.GetComponent<Animator>().SetTrigger("death");  
+            this.gameObject.GetComponent<Animator>().SetTrigger("death");
             this.gameObject.GetComponent<CapsuleCollider>().enabled = false;
+            GameFlow.updateKills();
             Destroy(this.gameObject,5.0f);
         }
     }
