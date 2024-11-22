@@ -20,6 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FirstPerson.unity
     guid: 2b9ecd77b12bbae408870e2c0198cb66
+  - enabled: 1
+    path: Assets/Scenes/Shooter.unity
+    guid: 39e9fbd95593d7d40a28a0ab7e1e6f80
+  - enabled: 1
+    path: Assets/Scenes/WinLose.unity
+    guid: 6aaf2c9820532b94abc3f46a7f87af23
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

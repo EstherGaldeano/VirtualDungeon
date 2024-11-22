@@ -35,7 +35,6 @@ public class FPSKeyFlow : MonoBehaviour
         if(GameFlow.kills >= 10 && !GameFlow.key1Obtained)
         {
             key1.gameObject.SetActive(true);
-            key2.gameObject.SetActive(true);
         }
         killsText.text = "KILLS: " + GameFlow.kills.ToString();
     }
@@ -55,6 +54,8 @@ public class FPSKeyFlow : MonoBehaviour
         if (other.gameObject.tag == "Key1")
         {
             Destroy(other.gameObject);
+
+            key2.gameObject.SetActive(true);
 
             GameFlow.key1Obtained = true;
             key1Img.SetActive(true);

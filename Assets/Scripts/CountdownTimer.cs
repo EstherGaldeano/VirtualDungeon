@@ -1,14 +1,18 @@
 using UnityEngine;
 using TMPro;
 using UnityEditor.Timeline;
+using UnityEngine.SceneManagement;
 
 public class CountdownTimer : MonoBehaviour
 {
     public float totalTime;
     public float time;
     public bool countingTime;
+    public float currentTime;
 
     public TMP_Text timeText;
+
+    public Leaderboard leaderboard;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,6 +29,8 @@ public class CountdownTimer : MonoBehaviour
         {
             time -= Time.deltaTime;
 
+            currentTime += Time.deltaTime;
+
             if (time <= 0)
             {
                 Debug.Log("Te has quedado sin tiempo");
@@ -32,6 +38,20 @@ public class CountdownTimer : MonoBehaviour
             }
         }
         timeText.text = TimeTextFormat(time);
+
+        if(Input.GetKeyDown(KeyCode.T)) 
+        { 
+            StopTimer();
+
+            SceneManager.LoadScene("WinLose");
+        }
+    }
+
+    public void StopTimer()
+    {
+        countingTime = false;
+
+        leaderboard.AddTime(currentTime);
     }
 
     string TimeTextFormat(float t)
