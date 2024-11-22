@@ -108,33 +108,27 @@ public class FPS : MonoBehaviour
             ammoUI.gameObject.GetComponent<TMP_Text>().text = ammo.ToString() + "/100";
         }
 
-        
+        if (other.gameObject.tag == "ArmAttack" || other.gameObject.tag == "HeadAttack")
+        {
+            if (health > 0)
+            {
+                health -= 10;
+                healthUI.gameObject.GetComponent<Image>().fillAmount = health / 100;
+                sounds.gameObject.transform.GetChild(0).gameObject.GetComponent<AudioSource>().Play();
+                Debug.Log(health);
+            }
+
+            if (health == 0)
+            {
+                sounds.gameObject.transform.GetChild(1).gameObject.GetComponent<AudioSource>().Play();
+                this.gameObject.GetComponent<Animator>().SetTrigger("Accion");
+                Invoke("GameOver", 3.0f);
+            }
+        }
 
     }
 
-    public void OnCollisionEnter(Collision other)
-    {
-
-      
-            //Daño enemigo. Tag Enemy solo para pruebas
-            if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "ArmAttack" || other.gameObject.tag == "HeadAttack")
-            {
-                if (health > 0)
-                {
-                    health -= 10;
-                    healthUI.gameObject.GetComponent<Image>().fillAmount = health / 100;
-                    sounds.gameObject.transform.GetChild(0).gameObject.GetComponent<AudioSource>().Play();
-                    Debug.Log(health);
-                }
-
-                if (health == 0)
-                {
-                    sounds.gameObject.transform.GetChild(1).gameObject.GetComponent<AudioSource>().Play();
-                    this.gameObject.GetComponent<Animator>().SetTrigger("Accion");
-                    Invoke("GameOver", 3.0f);
-                }
-            }
-        }
+   
 
     public void GameOver()
     {
