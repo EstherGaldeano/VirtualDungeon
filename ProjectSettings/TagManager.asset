@@ -23,6 +23,8 @@ TagManager:
   - Door2Close
   - GrateDoor
   - Enemy
+  - ArmAttack
+  - HeadAttack
   layers:
   - Default
   - TransparentFX
