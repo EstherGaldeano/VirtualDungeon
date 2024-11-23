@@ -26,6 +26,8 @@ TagManager:
   - ArmAttack
   - HeadAttack
   - Boss
+  - Crossbow
+  - BeerMug
   layers:
   - Default
   - TransparentFX
