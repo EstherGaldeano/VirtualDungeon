@@ -6,6 +6,8 @@ public class Leaderboard : MonoBehaviour
     private const int MaxScores = 10; // Máximo de puntuaciones a guardar
     private List<float> bestTimes = new List<float>();
 
+    public int youWon;
+
     private void Start()
     {
         LoadTimes();
@@ -54,5 +56,16 @@ public class Leaderboard : MonoBehaviour
     public List<float> GetBestTimes()
     {
         return new List<float>(bestTimes);
+    }
+
+    public void SetWinLose(int number)
+    {       
+        PlayerPrefs.SetInt("youWon", number);
+        PlayerPrefs.Save();
+    }
+
+    public void LoadWinLose()
+    {
+        youWon = PlayerPrefs.GetInt("youWon");
     }
 }

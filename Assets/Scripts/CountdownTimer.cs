@@ -34,6 +34,7 @@ public class CountdownTimer : MonoBehaviour
             if (time <= 0)
             {
                 Debug.Log("Te has quedado sin tiempo");
+                leaderboard.SetWinLose(0);
                 countingTime = false;
             }
         }
@@ -42,6 +43,15 @@ public class CountdownTimer : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.T)) 
         { 
             StopTimer();
+
+            leaderboard.SetWinLose(1);
+
+            SceneManager.LoadScene("WinLose");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            leaderboard.SetWinLose(0);
 
             SceneManager.LoadScene("WinLose");
         }

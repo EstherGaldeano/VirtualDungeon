@@ -118,7 +118,7 @@ public class FPS : MonoBehaviour
                 Debug.Log(health);
             }
 
-            if (health == 0)
+            if (health <= 0)
             {
                 sounds.gameObject.transform.GetChild(1).gameObject.GetComponent<AudioSource>().Play();
                 this.gameObject.GetComponent<Animator>().SetTrigger("Accion");
@@ -132,7 +132,7 @@ public class FPS : MonoBehaviour
 
     public void GameOver()
     {
-        SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene("WinLose");
     }
 
 }

@@ -16,7 +16,7 @@ public class LeaderboardUI : MonoBehaviour
     private void DisplayLeaderboard()
     {
         List<float> bestTimes = leaderboard.GetBestTimes();
-        leaderboardText.text = "Mejores Tiempos:\n";
+        leaderboardText.text = "";
 
         for (int i = 0; i < bestTimes.Count; i++)
         {
