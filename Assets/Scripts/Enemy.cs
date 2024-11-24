@@ -6,27 +6,29 @@ public class Enemy : MonoBehaviour
 {
     private GameObject player;
     private float distance;
-    private int enemyLife = 3;
+    public int enemyLife = 3;
     private int enemyAttackDamage = 1;
     private bool attackCooldown;
     private int randomAttack;
     private Vector3 playerPosition;
     private bool blockEnemy;
 
+    public CountdownTimer countdownTimer;
 
     void Start(){
         blockEnemy = false;
         attackCooldown = false;
         player =  (GameObject)GameObject.FindGameObjectWithTag("Player");
-    }
 
-    void Update(){
-
-        if (gameObject.tag == "Boss"){
+        if (gameObject.tag == "Boss")
+        {
             enemyLife = enemyLife * 3;
             enemyAttackDamage = enemyAttackDamage * 3;
-        }  
+        }
+    }
 
+    void Update()
+    {
         if (blockEnemy == false){
             distance = Vector3.Distance(this.gameObject.transform.position, player.gameObject.transform.position);
 
@@ -72,17 +74,43 @@ public class Enemy : MonoBehaviour
         attackCooldown = false;
     }
 
-    private void OnCollisionEnter(Collision other){
-        if (other.gameObject.tag=="Arrow"){
-            
-            blockEnemy = true;
-            this.gameObject.GetComponent<NavMeshAgent>().speed = 0.0f;
-            this.gameObject.GetComponent<Animator>().SetTrigger("death");
-            this.gameObject.GetComponent<CapsuleCollider>().enabled = false;
-            GameFlow.updateKills();
-            Destroy(this.gameObject,5.0f);
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag=="Arrow")
+        {
+            EnemyLoseLife();
         }
     }
 
-  
+    private void EnemyLoseLife()
+    {
+        enemyLife--;
+
+        if(enemyLife <= 0)
+        {
+            Debug.Log("muere");
+            EnemyDeath();
+        }
+    }
+
+    private void EnemyDeath()
+    {
+        blockEnemy = true;
+        this.gameObject.GetComponent<NavMeshAgent>().speed = 0.0f;
+        Debug.Log("ok1");
+        this.gameObject.GetComponent<Animator>().SetTrigger("death");
+        this.gameObject.GetComponent<CapsuleCollider>().enabled = false;
+        GameFlow.updateKills();
+        Destroy(this.gameObject, 5.0f);
+
+        if(gameObject.tag == "Boss")
+        {
+            Invoke("YouWin", 3.0f);
+        }
+    }
+
+    private void YouWin()
+    {
+        countdownTimer.YouWin();
+    }
 }

@@ -34,35 +34,41 @@ public class CountdownTimer : MonoBehaviour
             if (time <= 0)
             {
                 Debug.Log("Te has quedado sin tiempo");
-                leaderboard.SetWinLose(0);
-                countingTime = false;
+
+                TimeOut();                
             }
         }
         timeText.text = TimeTextFormat(time);
 
         if(Input.GetKeyDown(KeyCode.T)) 
-        { 
-            StopTimer();
-
-            leaderboard.SetWinLose(1);
-
-            SceneManager.LoadScene("WinLose");
+        {
+            YouWin();
         }
 
         if (Input.GetKeyDown(KeyCode.Y))
         {
-            leaderboard.SetWinLose(0);
-
-            SceneManager.LoadScene("WinLose");
+            time = 2.0f;
         }
     }
 
-    public void StopTimer()
+    public void TimeOut()
+    {
+        leaderboard.SetWinLose(0);
+
+        SceneManager.LoadScene("WinLose");
+    }
+
+    public void YouWin()
     {
         countingTime = false;
 
         leaderboard.AddTime(currentTime);
+
+        leaderboard.SetWinLose(1);
+
+        SceneManager.LoadScene("WinLose");
     }
+    
 
     string TimeTextFormat(float t)
     {

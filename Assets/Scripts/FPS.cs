@@ -28,6 +28,8 @@ public class FPS : MonoBehaviour
     [SerializeField]
     private GameObject sounds;
 
+    public Leaderboard leaderboard;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -132,6 +134,8 @@ public class FPS : MonoBehaviour
 
     public void GameOver()
     {
+        leaderboard.SetWinLose(0);
+
         SceneManager.LoadScene("WinLose");
     }
 
