@@ -88,7 +88,6 @@ public class Enemy : MonoBehaviour
 
         if(enemyLife <= 0)
         {
-            Debug.Log("muere");
             EnemyDeath();
         }
     }
@@ -97,7 +96,6 @@ public class Enemy : MonoBehaviour
     {
         blockEnemy = true;
         this.gameObject.GetComponent<NavMeshAgent>().speed = 0.0f;
-        Debug.Log("ok1");
         this.gameObject.GetComponent<Animator>().SetTrigger("death");
         this.gameObject.GetComponent<CapsuleCollider>().enabled = false;
         GameFlow.updateKills();

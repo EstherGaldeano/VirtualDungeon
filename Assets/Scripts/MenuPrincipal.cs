@@ -29,6 +29,8 @@ public class MenuPrincipal : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        Credits.SetActive(false);
     }
 
     // Update is called once per frame
