@@ -157,7 +157,7 @@ public class FPS : MonoBehaviour
         {
             if (health > 0)
             {
-                health -= 10;
+                health -= 10*other.gameObject.GetComponentInParent<Enemy>().enemyAttackDamage;
                 healthUI.gameObject.GetComponent<Image>().fillAmount = health / 100;
                 sounds.gameObject.transform.GetChild(0).gameObject.GetComponent<AudioSource>().Play();
                 Debug.Log(health);

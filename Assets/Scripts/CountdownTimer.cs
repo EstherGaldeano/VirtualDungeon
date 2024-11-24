@@ -33,7 +33,7 @@ public class CountdownTimer : MonoBehaviour
 
             if (time <= 0)
             {
-                Debug.Log("Te has quedado sin tiempo");
+                countingTime = false;
 
                 TimeOut();                
             }
@@ -55,7 +55,7 @@ public class CountdownTimer : MonoBehaviour
     {
         leaderboard.SetWinLose(0);
 
-        SceneManager.LoadScene("WinLose");
+        Invoke("GoToWinLose", 2.0f);
     }
 
     public void YouWin()
@@ -66,14 +66,31 @@ public class CountdownTimer : MonoBehaviour
 
         leaderboard.SetWinLose(1);
 
-        SceneManager.LoadScene("WinLose");
+        Invoke("GoToWinLose", 2.0f);
     }
     
 
     string TimeTextFormat(float t)
     {
-        int min = Mathf.FloorToInt(t / 60);
-        int sec = Mathf.FloorToInt(t % 60);
+        int min;
+        int sec;
+
+        if (t >= 0)
+        {
+            min = Mathf.FloorToInt(t / 60);
+            sec = Mathf.FloorToInt(t % 60);
+        }
+        else
+        {
+            min = 0;
+            sec = 0;
+        }
+
         return string.Format("{0:00}:{1:00}", min, sec);
+    }
+
+    private void GoToWinLose()
+    {
+        SceneManager.LoadScene("WinLose");
     }
 }
