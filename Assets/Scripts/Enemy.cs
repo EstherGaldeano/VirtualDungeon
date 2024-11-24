@@ -7,12 +7,14 @@ public class Enemy : MonoBehaviour
     private GameObject player;
     private float distance;
     private int enemyLife = 3;
-    public int enemyAttackDamage;
-    private int BaseEnemyAttackDamage = 1;
+    public int enemyAttackDamage = 1;
     private bool attackCooldown;
     private int randomAttack;
     private Vector3 playerPosition;
     private bool blockEnemy;
+
+    private float attackDistance = 2.0f;
+    private float followDistance = 5.0f;
 
     public CountdownTimer countdownTimer;
 
@@ -24,7 +26,9 @@ public class Enemy : MonoBehaviour
         if (gameObject.tag == "Boss")
         {
             enemyLife = enemyLife * 3;
-            BaseEnemyAttackDamage = BaseEnemyAttackDamage * 3;
+            enemyAttackDamage = enemyAttackDamage * 3;
+            attackDistance = 3.0f;
+            followDistance = 10.0f;
         }
     }
 
@@ -35,14 +39,12 @@ public class Enemy : MonoBehaviour
         
         if(blockEnemy == false)
         {
-            if (distance < 2f)
+            if (distance < attackDistance)
             {
                 //ANIMATION ATTACK
                 this.gameObject.transform.LookAt(playerPosition);
                 if (attackCooldown == false)
                 {
-                    enemyAttackDamage = BaseEnemyAttackDamage;
-
                     attackCooldown = true;
                     this.gameObject.GetComponent<NavMeshAgent>().speed = 0.0f;
                     randomAttack = Random.Range(0, 2);
@@ -58,13 +60,11 @@ public class Enemy : MonoBehaviour
                         this.gameObject.GetComponent<Animator>().SetTrigger("attackHit");
                     }
 
-                    enemyAttackDamage = 0;
-
                     Invoke("UnblockAttack", 1.5f);
                 }
             }
 
-            if (distance < 5.0f && distance >= 2f)
+            if (distance < followDistance && distance >= attackDistance)
             {
                 //ANIMATION RUN + FOLLOW
                 this.gameObject.transform.LookAt(playerPosition);
@@ -73,7 +73,7 @@ public class Enemy : MonoBehaviour
                 this.gameObject.GetComponent<NavMeshAgent>().SetDestination(player.transform.position);
             }
 
-            if (distance >= 5)
+            if (distance >= followDistance)
             {
                 this.gameObject.GetComponent<NavMeshAgent>().speed = 0.0f;
                 this.gameObject.GetComponent<Animator>().SetFloat("walking", 0.0f);
@@ -82,7 +82,8 @@ public class Enemy : MonoBehaviour
     }
     
 
-    private void UnblockAttack(){
+    private void UnblockAttack()
+    {
         attackCooldown = false;
     }
 
@@ -113,8 +114,9 @@ public class Enemy : MonoBehaviour
         GameFlow.updateKills();
         Destroy(this.gameObject, 5.0f);
 
-        countdownTimer.YouWin();        
-    }
-
-    
+        if(gameObject.tag == "Boss")
+        {
+            countdownTimer.YouWin();
+        }
+    }    
 }
