@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class FPS : MonoBehaviour
 {
@@ -13,7 +14,16 @@ public class FPS : MonoBehaviour
     private GameObject healthUI;
 
     [SerializeField]
+    private GameObject crossbow;
+
+    [SerializeField]
     private GameObject arrowAmmo;
+
+    [SerializeField]
+    private GameObject beerAmmo;
+
+    [SerializeField]
+    private GameObject beerMug;
 
     private GameObject arrowAmmoClone;
 
@@ -29,12 +39,14 @@ public class FPS : MonoBehaviour
     private GameObject sounds;
 
     public Leaderboard leaderboard;
+    private bool drink;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         ammo = 100;
         health = 100.0f;
+        drink = false;
     }
 
     // Update is called once per frame
@@ -42,18 +54,31 @@ public class FPS : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (ammo > 0)
+            if (drink == false) //Si no tiene una cerveza en mano, dispara flechas
             {
-                ammo--;
-                ammoUI.gameObject.GetComponent<TMP_Text>().text = ammo.ToString() + "/100";
-                arrowAmmoClone = (GameObject)Instantiate(arrowAmmo, creationPoint.gameObject.transform.position, creationPoint.transform.rotation * Quaternion.Euler(270, 15, 0));
-                arrowAmmoClone.gameObject.GetComponent<Rigidbody>().linearVelocity = this.gameObject.transform.GetChild(0).gameObject.transform.forward * arrowForce;
-                Destroy(arrowAmmoClone.gameObject, 5.0f);
-            }
+                if (ammo > 0)
+                {
+                    ammo--;
+                    ammoUI.gameObject.GetComponent<TMP_Text>().text = ammo.ToString() + "/100";
+                    arrowAmmoClone = (GameObject)Instantiate(arrowAmmo, creationPoint.gameObject.transform.position, creationPoint.transform.rotation * Quaternion.Euler(270, 15, 0));
+                    arrowAmmoClone.gameObject.GetComponent<Rigidbody>().linearVelocity = this.gameObject.transform.GetChild(0).gameObject.transform.forward * arrowForce;
+                    Destroy(arrowAmmoClone.gameObject, 5.0f);
+                }
 
-            if (ammo == 0)
+                if (ammo == 0)
+                {
+                    sounds.gameObject.transform.GetChild(3).gameObject.GetComponent<AudioSource>().Play();
+                }
+            }
+            else //Si tiene una cerveza, lanza jarra
             {
-                sounds.gameObject.transform.GetChild(3).gameObject.GetComponent<AudioSource>().Play();
+                beerAmmo = (GameObject)Instantiate(beerAmmo, creationPoint.gameObject.transform.position, creationPoint.transform.rotation * Quaternion.Euler(270, 15, 0));
+                beerAmmo.gameObject.GetComponent<Rigidbody>().linearVelocity = this.gameObject.transform.GetChild(0).gameObject.transform.forward * arrowForce;
+                crossbow.gameObject.SetActive(true);
+                beerMug.gameObject.SetActive(false);
+                drink = false;
+                Destroy(beerAmmo.gameObject, 5.0f);
+                
             }
         }
     }
@@ -68,16 +93,34 @@ public class FPS : MonoBehaviour
 
         if (other.gameObject.tag == "BeerHealth")
         {
-
-            //El objeto no se detruye si la salud está al máximo
+            
+            /*
+             * BACKPUP SCRIPT SOLO FLECHAS, NO CERVEZA
+             * 
+            //El objeto no se detruye si la salud estï¿½ al mï¿½ximo
             if (health < 100)
             {
                 health += 10;
                 sounds.gameObject.transform.GetChild(2).gameObject.GetComponent<AudioSource>().Play();
-                Destroy(other.gameObject);
+                Destroy(other.gameObject);  
             }
+            */
 
-            //La salud no aumentará más de 100
+
+            //SCRIPT PARA LANZAR CERVEZA
+            //El objeto no se detruye si la salud estï¿½ al mï¿½ximo
+            if (health < 100)
+            {               
+                health += 10;
+                sounds.gameObject.transform.GetChild(2).gameObject.GetComponent<AudioSource>().Play();
+                Destroy(other.gameObject);
+                drink = true; //Activamos booleano para anular el disparo de la flecha 
+                crossbow.gameObject.SetActive(false);
+                beerMug.gameObject.SetActive(true);
+            }
+       
+
+            //La salud no aumentarï¿½ mï¿½s de 100
             if (health >= 100)
             {
                 health = 100;
@@ -88,7 +131,7 @@ public class FPS : MonoBehaviour
 
         if (other.gameObject.tag == "Ammo")
         {
-            //Si la munición está al máximo, el objeto no se eliminará
+            //Si la municiï¿½n estï¿½ al mï¿½ximo, el objeto no se eliminarï¿½
             if (ammo < 100)
             {
                 ammo += 10;
@@ -96,7 +139,7 @@ public class FPS : MonoBehaviour
                 sounds.gameObject.transform.GetChild(4).gameObject.GetComponent<AudioSource>().Play();  
             }
 
-            //La munición no aumentará más de 100
+            //La municiï¿½n no aumentarï¿½ mï¿½s de 100
             if (ammo >= 100)
             {
                 ammo = 100;
@@ -124,6 +167,7 @@ public class FPS : MonoBehaviour
             {
                 sounds.gameObject.transform.GetChild(1).gameObject.GetComponent<AudioSource>().Play();
                 this.gameObject.GetComponent<Animator>().SetTrigger("Accion");
+                this.gameObject.GetComponent<CharacterController>().enabled = false;
                 Invoke("GameOver", 3.0f);
             }
         }
