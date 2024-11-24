@@ -99,7 +99,19 @@ public class Enemy : MonoBehaviour
     {
         enemyLife--;
 
-        if(enemyLife <= 0)
+        CheckEnemyLife();
+    }
+
+    public void ExplosionDamage()
+    {
+        enemyLife -= 3;
+
+        CheckEnemyLife();
+    }
+
+    private void CheckEnemyLife()
+    {
+        if (enemyLife <= 0)
         {
             EnemyDeath();
         }
@@ -111,6 +123,16 @@ public class Enemy : MonoBehaviour
         this.gameObject.GetComponent<NavMeshAgent>().speed = 0.0f;
         this.gameObject.GetComponent<Animator>().SetTrigger("death");
         this.gameObject.GetComponent<CapsuleCollider>().enabled = false;
+
+        foreach(Transform child in transform)
+        {
+            Collider collider = child.GetComponent<Collider>();
+            if(collider != null)
+            {
+                collider.enabled = false;
+            }
+        }
+
         GameFlow.updateKills();
         Destroy(this.gameObject, 5.0f);
 

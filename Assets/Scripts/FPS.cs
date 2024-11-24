@@ -41,6 +41,8 @@ public class FPS : MonoBehaviour
     public Leaderboard leaderboard;
     private bool drink;
 
+    private bool arrowCooldown;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -56,13 +58,17 @@ public class FPS : MonoBehaviour
         {
             if (drink == false) //Si no tiene una cerveza en mano, dispara flechas
             {
-                if (ammo > 0)
+                if (ammo > 0 && !arrowCooldown)
                 {
+                    arrowCooldown = true;
+
                     ammo--;
                     ammoUI.gameObject.GetComponent<TMP_Text>().text = ammo.ToString() + "/100";
                     arrowAmmoClone = (GameObject)Instantiate(arrowAmmo, creationPoint.gameObject.transform.position, creationPoint.transform.rotation * Quaternion.Euler(270, 15, 0));
                     arrowAmmoClone.gameObject.GetComponent<Rigidbody>().linearVelocity = this.gameObject.transform.GetChild(0).gameObject.transform.forward * arrowForce;
                     Destroy(arrowAmmoClone.gameObject, 5.0f);
+
+                    Invoke("UnblockArrow", 1.0f);
                 }
 
                 if (ammo == 0)
@@ -81,6 +87,11 @@ public class FPS : MonoBehaviour
                 
             }
         }
+    }
+
+    private void UnblockArrow()
+    {
+        arrowCooldown = false;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -163,18 +174,31 @@ public class FPS : MonoBehaviour
                 Debug.Log(health);
             }
 
-            if (health <= 0)
-            {
-                sounds.gameObject.transform.GetChild(1).gameObject.GetComponent<AudioSource>().Play();
-                this.gameObject.GetComponent<Animator>().SetTrigger("Accion");
-                this.gameObject.GetComponent<CharacterController>().enabled = false;
-                Invoke("GameOver", 3.0f);
-            }
+            CheckHealth();
         }
 
     }
 
-   
+    public void ExplosionDamage()
+    {
+        health -= 20f;
+        healthUI.gameObject.GetComponent<Image>().fillAmount = health / 100;
+        sounds.gameObject.transform.GetChild(0).gameObject.GetComponent<AudioSource>().Play();
+        Debug.Log(health);
+
+        CheckHealth();
+    }
+
+    private void CheckHealth()
+    {
+        if (health <= 0)
+        {
+            sounds.gameObject.transform.GetChild(1).gameObject.GetComponent<AudioSource>().Play();
+            this.gameObject.GetComponent<Animator>().SetTrigger("Accion");
+            this.gameObject.GetComponent<CharacterController>().enabled = false;
+            Invoke("GameOver", 3.0f);
+        }
+    }
 
     public void GameOver()
     {
