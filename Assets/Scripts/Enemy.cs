@@ -30,6 +30,11 @@ public class Enemy : MonoBehaviour
             attackDistance = 3.0f;
             followDistance = 10.0f;
         }
+
+        if (gameObject.tag == "EnemyJail")
+        {
+            followDistance = 10.0f;
+        }
     }
 
     void Update()
