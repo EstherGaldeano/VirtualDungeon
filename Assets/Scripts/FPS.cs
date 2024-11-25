@@ -78,12 +78,12 @@ public class FPS : MonoBehaviour
             }
             else //Si tiene una cerveza, lanza jarra
             {
-                beerAmmo = (GameObject)Instantiate(beerAmmo, creationPoint.gameObject.transform.position, creationPoint.transform.rotation * Quaternion.Euler(270, 15, 0));
-                beerAmmo.gameObject.GetComponent<Rigidbody>().linearVelocity = this.gameObject.transform.GetChild(0).gameObject.transform.forward * arrowForce;
+                GameObject beerAmmoInstance = (GameObject)Instantiate(beerAmmo, creationPoint.gameObject.transform.position, creationPoint.transform.rotation * Quaternion.Euler(270, 15, 0));
+                beerAmmoInstance.gameObject.GetComponent<Rigidbody>().linearVelocity = this.gameObject.transform.GetChild(0).gameObject.transform.forward * arrowForce;
                 crossbow.gameObject.SetActive(true);
                 beerMug.gameObject.SetActive(false);
                 drink = false;
-                Destroy(beerAmmo.gameObject, 5.0f);
+                Destroy(beerAmmoInstance.gameObject, 5.0f);
                 
             }
         }
