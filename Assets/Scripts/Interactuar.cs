@@ -21,7 +21,7 @@ public class Interactuar : MonoBehaviour
         dungeonDoorsClosed = true;
 
         Scene currentScene = SceneManager.GetActiveScene();
-        if(currentScene.name == "FirstPerson")
+        if(currentScene.name == "FirstPerson" || currentScene.name == "Shooter")
         {
             rayDistance = 3f;
         }
@@ -41,7 +41,7 @@ public class Interactuar : MonoBehaviour
         // Realizar el raycast usando el LayerMask
         if (Physics.Raycast(ray, out RaycastHit hitObject, rayDistance, layerMask))
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 if(hitObject.collider.gameObject.tag == "DungeonChest")
                 {
