@@ -129,7 +129,7 @@ public class Enemy : MonoBehaviour
         this.gameObject.GetComponent<Animator>().SetTrigger("death");
         this.gameObject.GetComponent<CapsuleCollider>().enabled = false;
 
-        foreach(Transform child in transform)
+        foreach (Transform child in transform)
         {
             Collider collider = child.GetComponent<Collider>();
             if(collider != null)
