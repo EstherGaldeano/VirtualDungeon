@@ -10,6 +10,10 @@ public class WinLoseUI : MonoBehaviour
 
     public GameObject panelLeaderboard;
 
+    public AudioSource audioSource;
+    public AudioClip clipWin;
+    public AudioClip clipLose;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,10 +27,14 @@ public class WinLoseUI : MonoBehaviour
         if (leaderboard.youWon == 1)
         {
             YouWon();
+            audioSource.clip = clipWin;
+            audioSource.Play();
         }
         else
         {
             YouLose();
+            audioSource.clip = clipLose;
+            audioSource.Play();
         }
     }
 
