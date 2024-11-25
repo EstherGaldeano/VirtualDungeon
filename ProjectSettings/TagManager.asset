@@ -28,7 +28,6 @@ TagManager:
   - Boss
   - Crossbow
   - BeerMug
-  - EnemyJail
   layers:
   - Default
   - TransparentFX
