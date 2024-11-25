@@ -96,12 +96,7 @@ public class FPS : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "PruebaEnemigo")
-        {
-            Debug.Log("enemigo tocado");
-        }
-
-
+        
         if (other.gameObject.tag == "BeerHealth")
         {
             
@@ -184,6 +179,7 @@ public class FPS : MonoBehaviour
         health -= 20f;
         healthUI.gameObject.GetComponent<Image>().fillAmount = health / 100;
         sounds.gameObject.transform.GetChild(0).gameObject.GetComponent<AudioSource>().Play();
+        sounds.gameObject.transform.GetChild(5).gameObject.GetComponent<AudioSource>().Play();
         Debug.Log(health);
 
         CheckHealth();
