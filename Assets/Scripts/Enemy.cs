@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     private bool blockEnemy;
 
     private float attackDistance = 2.0f;
-    private float followDistance = 5.0f;
+    private float followDistance = 10.0f;
 
     public CountdownTimer countdownTimer;
 
