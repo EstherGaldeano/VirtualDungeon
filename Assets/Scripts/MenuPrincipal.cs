@@ -6,11 +6,10 @@ using UnityEngine.UI;
 
 public class MenuPrincipal : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject ButtonFixedCam;
+    
 
     [SerializeField]
-    private GameObject ButtonFPSCam;
+    private GameObject ButtonFPS;
 
     [SerializeField]
     private GameObject ButtonSalir;
@@ -41,8 +40,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public void Creditos()
     {
-        this.ButtonFixedCam.SetActive(false);
-        this.ButtonFPSCam.SetActive(false);
+        this.ButtonFPS.SetActive(false);
         this.ButtonSalir.SetActive(false);
         this.ButtonCredits.SetActive(false);
         this.Credits.SetActive(true);
@@ -51,8 +49,8 @@ public class MenuPrincipal : MonoBehaviour
 
     public void BackMP()
     {
-        this.ButtonFixedCam.SetActive(true);
-        this.ButtonFPSCam.SetActive(true);
+       
+        this.ButtonFPS.SetActive(true);
         this.ButtonSalir.SetActive(true);
         this.ButtonCredits.SetActive(true);
         this.Credits.SetActive(false);
