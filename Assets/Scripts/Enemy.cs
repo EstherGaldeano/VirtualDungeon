@@ -99,11 +99,24 @@ public class Enemy : MonoBehaviour
             EnemyLoseLife();
             followDistance = 100.0f;
         }
+
+        if (other.gameObject.tag == "BeerMug")
+        {
+            BeerMugDamage();
+            followDistance = 100.0f;
+        }
     }
 
     private void EnemyLoseLife()
     {
         enemyLife--;
+
+        CheckEnemyLife();
+    }
+
+    private void BeerMugDamage()
+    {
+        enemyLife -= 3;
 
         CheckEnemyLife();
     }
