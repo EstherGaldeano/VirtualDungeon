@@ -183,6 +183,13 @@ public class FPS : MonoBehaviour
             sounds.gameObject.transform.GetChild(6).gameObject.GetComponent<AudioSource>().Play();
         }
 
+        if(other.gameObject.tag == "WaterDetector")
+        {
+            health -= 110;
+
+            CheckHealth();
+        }
+
     }
 
     private void StopInvulnerable()

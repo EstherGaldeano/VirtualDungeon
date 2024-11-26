@@ -29,6 +29,7 @@ TagManager:
   - Crossbow
   - BeerMug
   - EnemyJail
+  - WaterDetector
   layers:
   - Default
   - TransparentFX
