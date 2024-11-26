@@ -73,7 +73,7 @@ public class Enemy : MonoBehaviour
             {
                 //ANIMATION RUN + FOLLOW
                 this.gameObject.transform.LookAt(playerPosition);
-                this.gameObject.GetComponent<NavMeshAgent>().speed = 5.0f;
+                this.gameObject.GetComponent<NavMeshAgent>().speed = 3.0f;
                 this.gameObject.GetComponent<Animator>().SetFloat("walking", 1.0f);
                 this.gameObject.GetComponent<NavMeshAgent>().SetDestination(player.transform.position);
             }
