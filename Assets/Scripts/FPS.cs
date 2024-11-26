@@ -128,7 +128,7 @@ public class FPS : MonoBehaviour
             }
        
 
-            //La salud no aumentar� m�s de 100
+            //La salud no aumentara mas de 100
             if (health >= 100)
             {
                 health = 100;
@@ -139,7 +139,7 @@ public class FPS : MonoBehaviour
 
         if (other.gameObject.tag == "Ammo")
         {
-            //Si la munici�n est� al m�ximo, el objeto no se eliminar�
+            //Si la municion esta al maximo, el objeto no se eliminara
             if (ammo < 100)
             {
                 ammo += 5;
@@ -147,10 +147,10 @@ public class FPS : MonoBehaviour
                 sounds.gameObject.transform.GetChild(4).gameObject.GetComponent<AudioSource>().Play();  
             }
 
-            //La munici�n no aumentar� m�s de 100
-            if (ammo >= 100)
+            //La municion no aumentara mas de 20
+            if (ammo >= 20)
             {
-                ammo = 100;
+                ammo = 20;
             }
 
             if (ammo == 0)
