@@ -48,7 +48,7 @@ public class FPS : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        ammo = 100;
+        ammo = 20;
         health = 100.0f;
         drink = false;
     }
@@ -65,7 +65,7 @@ public class FPS : MonoBehaviour
                     arrowCooldown = true;
 
                     ammo--;
-                    ammoUI.gameObject.GetComponent<TMP_Text>().text = ammo.ToString() + "/100";
+                    ammoUI.gameObject.GetComponent<TMP_Text>().text = ammo.ToString() + "/20";
                     arrowAmmoClone = (GameObject)Instantiate(arrowAmmo, creationPoint.gameObject.transform.position, creationPoint.transform.rotation * Quaternion.Euler(270, 15, 0));
                     arrowAmmoClone.gameObject.GetComponent<Rigidbody>().linearVelocity = this.gameObject.transform.GetChild(0).gameObject.transform.forward * arrowForce;
                     Destroy(arrowAmmoClone.gameObject, 5.0f);
@@ -158,7 +158,7 @@ public class FPS : MonoBehaviour
                 sounds.gameObject.transform.GetChild(3).gameObject.GetComponent<AudioSource>().Play();
             }
            
-            ammoUI.gameObject.GetComponent<TMP_Text>().text = ammo.ToString() + "/100";
+            ammoUI.gameObject.GetComponent<TMP_Text>().text = ammo.ToString() + "/20";
         }
 
         if ((other.gameObject.tag == "ArmAttack" || other.gameObject.tag == "HeadAttack") && !invulnerable)
