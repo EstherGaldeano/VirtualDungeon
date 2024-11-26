@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3ba61c3db8ebdf1418a007bc8acbd415, type: 3}
       propertyPath: m_TagString
-      value: Arrow
+      value: BeerMug
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -138,7 +138,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 64d048a9178b9d64f8017ef23652a4e8, type: 3}
   m_Resource: {fileID: 8300000, guid: 64d048a9178b9d64f8017ef23652a4e8, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
