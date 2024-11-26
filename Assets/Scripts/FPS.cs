@@ -142,7 +142,7 @@ public class FPS : MonoBehaviour
             //Si la munici�n est� al m�ximo, el objeto no se eliminar�
             if (ammo < 100)
             {
-                ammo += 10;
+                ammo += 5;
                 Destroy(other.gameObject);   
                 sounds.gameObject.transform.GetChild(4).gameObject.GetComponent<AudioSource>().Play();  
             }
