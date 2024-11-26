@@ -97,6 +97,7 @@ public class Enemy : MonoBehaviour
         if (other.gameObject.tag=="Arrow")
         {
             EnemyLoseLife();
+            followDistance = 100.0f;
         }
     }
 
