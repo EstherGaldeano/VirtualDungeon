@@ -140,7 +140,7 @@ public class FPS : MonoBehaviour
         if (other.gameObject.tag == "Ammo")
         {
             //Si la municion esta al maximo, el objeto no se eliminara
-            if (ammo < 100)
+            if (ammo < 20)
             {
                 ammo += 5;
                 Destroy(other.gameObject);   
