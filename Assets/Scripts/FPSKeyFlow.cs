@@ -17,6 +17,7 @@ public class FPSKeyFlow : MonoBehaviour
 
     public Animator text1anim;
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -68,9 +69,10 @@ public class FPSKeyFlow : MonoBehaviour
             Destroy(other.gameObject);
 
             key2.gameObject.SetActive(true);
-
+           
             GameFlow.key1Obtained = true;
             key1Img.SetActive(true);
+
         }
         if (other.gameObject.tag == "Key2")
         {

@@ -177,6 +177,12 @@ public class FPS : MonoBehaviour
 
             CheckHealth();
         }
+
+        if (other.gameObject.tag == "Key1" || other.gameObject.tag == "Key2")
+        {
+            sounds.gameObject.transform.GetChild(6).gameObject.GetComponent<AudioSource>().Play();
+        }
+
     }
 
     private void StopInvulnerable()
