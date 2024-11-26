@@ -43,6 +43,8 @@ public class FPS : MonoBehaviour
 
     private bool arrowCooldown;
 
+    private bool invulnerable = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -159,8 +161,12 @@ public class FPS : MonoBehaviour
             ammoUI.gameObject.GetComponent<TMP_Text>().text = ammo.ToString() + "/100";
         }
 
-        if (other.gameObject.tag == "ArmAttack" || other.gameObject.tag == "HeadAttack")
+        if ((other.gameObject.tag == "ArmAttack" || other.gameObject.tag == "HeadAttack") && !invulnerable)
         {
+            invulnerable = true;
+
+            Invoke("StopInvulnerable",0.1f);
+
             if (health > 0)
             {
                 health -= 10*other.gameObject.GetComponentInParent<Enemy>().enemyAttackDamage;
@@ -171,7 +177,11 @@ public class FPS : MonoBehaviour
 
             CheckHealth();
         }
+    }
 
+    private void StopInvulnerable()
+    {
+        invulnerable = false;
     }
 
     public void ExplosionDamage()
