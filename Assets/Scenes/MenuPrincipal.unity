@@ -836,8 +836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459915ee3eca5f2448ef783bc66ba69f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonFixedCam: {fileID: 0}
-  ButtonFPSCam: {fileID: 1886779759}
+  ButtonFPS: {fileID: 1886779759}
   ButtonSalir: {fileID: 1910433648}
   ButtonCredits: {fileID: 1814413829}
   Credits: {fileID: 716797391}
@@ -3756,10 +3755,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Shooter creado por:\nEsther Galdeano\nAndr\xE9s Hidalgo\nDaniel Grados\n\nAssets:\r\nhttps://kaylousberg.itch.io/kaykit-dungeon-remastered\n\nM\xFAsica:\nhttps://pixabay.com/es/music/musica-de-elevador-elevator-music-bossa-nova-background-music-version-60s-10900/\n\n\"Celebration\"
-    and \"Adventure\" by Alexander Nakarada (CreatorChords) | https://creatorchords.com\r\nMusic
-    promoted by https://www.free-stock-music.com\r\nCreative Commons / Attribution
-    4.0 International (CC BY 4.0)\r\nhttps://creativecommons.org/licenses/by/4.0/"
+  m_text: "Shooter creado por:\nEsther Galdeano\nAndr\xE9s Hidalgo\nDaniel Grados\n\nAssets:\r\nhttps://kaylousberg.itch.io/kaykit-dungeon-remastered\n\nM\xFAsica:\nhttps://pixabay.com/es/music/musica-de-elevador-elevator-music-bossa-nova-background-music-version-60s-10900/\n\nhttps://pixabay.com/es/music/accion-return-of-the-demon-slayer-8686/\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -3786,8 +3782,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.8
-  m_fontSizeBase: 18.8
+  m_fontSize: 24.24
+  m_fontSizeBase: 24.24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
